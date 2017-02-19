@@ -29,6 +29,54 @@ Master:
   - 0.0.0.0/0
   CustomConfigMap: false
 
+  Plugins:
+    InstallOnInit: true
+    List:
+    - ace-editor
+    - authentication-tokens
+    - bouncycastle-api
+    - branch-api
+    - cloudbees-folder
+    - credentials
+    - credentials-binding
+    - display-url-api
+    - docker-commons
+    - durable-task
+    - git
+    - git-client
+    - git-server
+    - handlebars
+    - icon-shim
+    - jquery-detached
+    - junit
+    - kubernetes
+    - mailer
+    - matrix-project
+    - momentjs
+    - pipeline-build-step
+    - pipeline-graph-analysis
+    - pipeline-input-step
+    - pipeline-milestone-step
+    - pipeline-rest-api
+    - pipeline-stage-step
+    - pipeline-stage-view
+    - plain-credentials
+    - scm-api
+    - script-security
+    - ssh-credentials
+    - structs
+    - workflow-aggregator
+    - workflow-api
+    - workflow-basic-steps
+    - workflow-cps
+    - workflow-cps-global-lib
+    - workflow-durable-task-step
+    - workflow-job
+    - workflow-multibranch
+    - workflow-scm-step
+    - workflow-step-api
+    - workflow-support
+
   Ingress:
     Annotations:
       # kubernetes.io/ingress.class: nginx
