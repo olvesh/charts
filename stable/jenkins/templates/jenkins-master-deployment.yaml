@@ -38,7 +38,24 @@ spec:
                           "mountPath": "/var/jenkins_home"
                       }
                   ]
-              }{{ if .Values.Master.Plugins.InstallOnInit }},
+              }{{ if .Values.Master.Plugins.CleanOnInit }},
+              {
+                  "name": "remove-installed-plugins",
+                  "image": "{{.Values.Master.Image}}:{{.Values.Master.ImageTag}}",
+                  "imagePullPolicy": "{{.Values.Master.ImagePullPolicy}}",
+                  "command": ["sh", "-c", "rm -r /var/jenkins_home/plugins/*"],
+                  "volumeMounts": [
+                      {
+                          "name": "jenkins-config",
+                          "mountPath": "/var/jenkins_config"
+                      },
+                      {
+                          "name": "jenkins-home",
+                          "mountPath": "/var/jenkins_home"
+                      }
+                  ]
+
+              }{{- end -}}{{ if .Values.Master.Plugins.InstallOnInit }},
               {
                   "name": "scripted-plugins-install",
                   "image": "{{.Values.Master.Image}}:{{.Values.Master.ImageTag}}",

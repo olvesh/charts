@@ -30,6 +30,7 @@ Master:
   CustomConfigMap: false
 
   Plugins:
+    CleanOnInit: false
     InstallOnInit: true
     List:
     - ace-editor
