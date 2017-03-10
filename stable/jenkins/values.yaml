@@ -51,6 +51,9 @@ Master:
     - jquery-detached
     - junit
     - kubernetes
+    - kubernetes-pipeline-aggregator
+    - kubernetes-pipeline-devops-steps
+    - kubernetes-pipeline-steps
     - mailer
     - matrix-project
     - momentjs
